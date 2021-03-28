@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI 계산기</title>
+</head>
+<body>
+  <script>
+    // BMI(비만도, 체질량지수) 산출방법
+    // 체질량지수 = 체중(kg) / 키(m)의 제곱 
+    // 1m = 100cm
+    let height = Number(prompt('키를 입력하세요 (cm)'));
+    let weight = Number(prompt('체중을 입력하세요 (kg)'));
+    let squareOfHeight = ((height * height)/10000);
+    let bmi = weight / squareOfHeight;
+    let result = bmi.toFixed(2);
+
+    document.write(`입력하신 키는 ${height}입니다.<br>`);
+    document.write(`입력하신 체중은 ${weight}입니다.<br><br>`);
+    document.write(`당신의 BMI지수는 ${result}입니다.`)
+ 
+  </script>
+</body>
+</html>
