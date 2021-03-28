@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>is Prime</title>
+</head>
+<body>
+  <h3>사용자가 입력한 숫자가 소수인지 아닌지 알려주는 프로그램</h3>
+  <script>
+    let isPrime = true;
+    let num = Number(prompt('2이상의 정수를 입력하세요'));
+
+    for(let i = 2; i < num; i++) {
+      if(num % i === 0) {
+        // num이 1과 자신외에 다른 수로 나눠지면
+        // isPrime변수가 false가 된다.
+        isPrime = false;
+        // 입력한 수가 나눠져서 소수가 아닌게 들통났을때
+        // break문으로 멈춘다.
+        // 불필요하게 더 나누지 않아도 된다.
+        break;
+      }
+      console.log(isPrime, i);
+    }
+
+    if(isPrime) {
+      // isPrime === true일때
+      document.write(`${num}은 소수입니다.`);
+    } else {
+      // isPrime === false
+      document.write(`${num}은 1과 자기 자신외에 나눠지는 수가 있네요! 소수가 아닙니다.`);
+    }
+
+  </script>
+</body>
+</html>
