@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소문자일까요 대문자일까요?</title>
+</head>
+<body>
+  <script>
+  let str = prompt('영어로 문장을 입력해보세요, 입력한 문장이 대문자인지 소문자인지 알려줄게요!');
+  if(str.toUpperCase() === str) {
+    document.write('대문자로 입력하셨네요!<br>');
+    document.write('입력한 문장 : '+ str.toUpperCase());
+  } else if (str.toLowerCase() === str) {
+    document.write('소문자로 입력하셨네요!<br>');
+    document.write('입력한 문장 : '+ str.toLowerCase());
+  } else {
+    document.write('대문자 소문자 둘 다 사용하셨네요!<br>');
+    document.write('입력한 문장 : '+ str);
+  }
+  </script>
+</body>
+</html>
