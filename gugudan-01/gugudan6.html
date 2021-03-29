@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문 for문과 함수를 사용한 n단</title>
+</head>
+<body> 
+  출력할 단수: <input type="text" id="num">
+  <button onclick="runGugudan()">확인</button>
+  <script>
+   
+    
+    function runGugudan() {
+      let strN = document.getElementById('num').value;
+      let n = Number(strN);
+
+      document.write(`<h2>구구단 ${n}단</h2>`);
+      
+      for(let i = 1; i < 10; i++) {
+      document.write(`${n} X ${i} = ${n*i}<br>`);
+      }
+    }
+
+
+  </script>
+</body>
+</html>
