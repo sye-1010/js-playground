@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
+, initial-scale=1.0">
+  <title>조건문을 사용한 구구단 출력</title>
+</head>
+<body>
+  <script>
+    let n =  Number(prompt('2단부터 9단까지의 구구단을 출력해드립니다. 원하는 단수를 입력하세요.'));
+
+    while(n < 2 || n > 9 || n != Number(n)) {
+      n = Number(prompt('2이상 9이하의 숫자만을 입력받습니다.'));
+    }
+    if (n >= 2 || n <= 9 || n == Number(n)){
+      document.write(`<h3>구구단 ${n}단 출력</h3>`);
+      for(let i = 1; i < 10; i++) {
+        let ret = n * i;
+        document.write(`${n} X ${i} = ${ret}<br>`);
+      }
+    }
+  </script>
+</body>
+</html>
